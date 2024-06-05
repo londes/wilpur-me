@@ -70,6 +70,8 @@
   }
   
   /* ------ end boilerplate ------- */
+
+  /* ------ begin enter page ------ */
   
 .main-intro {
     background-image: url("./images/wilpur1_hs.png");
@@ -86,13 +88,53 @@
     display: flex;
     justify-content: space-around;
     margin-top: 20vh;
-
 }
 
-.enter-container-block > p {
+.icon-door {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.enter-container-block, .enter-container-block-door > p {
     color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     -webkit-text-stroke-width: .02em;
-    -webkit-text-stroke-color: #FFA500;
+    -webkit-text-stroke-color: #F17500;
 }
+
+.enter-container-block:hover p {
+    color: #FFBC46;
+    cursor: pointer;
+}
+
+.enter-container-block-door:hover p {
+    color: #FFBC46;
+    cursor: pointer;
+}
+
+.enter-container-block-door:hover .icon-door {
+    opacity: 1;
+}
+
+.icon-door {
+    width: 2em;
+    height: 2em;
+    background-image: url("./images/door.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+/* ------ end enter page ------ */
+
+
+
+
+/* orange is F17500 */
+/* brown is 8B2B00 */
+/* tan is FFBC46 */
+/* skin tone is E69868 */
+/* green is 618A49 */
+/* scroll dark is AD9978 */
+/* scroll light is D5C5A4 */
 
