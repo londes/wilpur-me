@@ -127,11 +127,12 @@ h3 {
     transition: opacity 1s ease-in-out; 
 }
 
-.enter-container-block, .enter-container-block-door > p {
+.enter-container-block > p, .enter-container-block-door > p {
     color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     -webkit-text-stroke-width: .02em;
     -webkit-text-stroke-color: var(--wilpur-orange);
+    font-size: 1em;
 }
 
 .enter-container-block:hover p {
