@@ -160,7 +160,7 @@ h3 {
 
 /* ------ end enter page ------ */
 
-/* ------ begin home page ------ */
+/* ------ begin projects page ------ */
 
 .main-container {
     background-image: url("./images/clouds_background.jpeg");
@@ -234,6 +234,37 @@ h3 {
 
 .main-footer p {
     font-size: .3rem;
+}
+
+.topic-selector {
+    height: 1rem;
+    width: 1rem;
+    background-image: url('./images/torch_unlit.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.topic-top {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.topic-top h2 {
+    font-size: .6em;
+    margin-right: .4rem;
+}
+
+.topic-items {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.topic-items.show {
+    max-height: 3rem;
+    transition: max-height 0.5s ease-in;
 }
 
 /* ------ end home page ------ */

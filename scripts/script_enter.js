@@ -11,7 +11,7 @@ willDiv.addEventListener('click', () => {
 enterDiv.addEventListener('click', () => {
     document.querySelector('.icon-door').style.backgroundImage = "url('./images/door_open.svg')"
     setTimeout(() => {
-        window.location.href = 'home.html'
+        window.location.href = 'projects.html'
     }, 1000)
 })
 
