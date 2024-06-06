@@ -1,7 +1,7 @@
 let willDiv = document.querySelector('.enter-container-block')
 let enterDiv = document.querySelector('.enter-container-block-door')
 
-let sickEmojis = [ '🔥', '👽', '🤙', '🏂', '🚲', '🍜', '🍕', '🕹️', '🌊', '🎶', '🐉' ]
+let sickEmojis = [ '🔥', '👽', '🤙', '🏂', '🚲', '🍜', '🍕', '🕹️', '🌊', '🎶', '🐉', '🧙‍♂️', '🍻' ]
 
 willDiv.addEventListener('click', () => {
     let emojisText = getRandomElements(sickEmojis, 5)
@@ -11,7 +11,7 @@ willDiv.addEventListener('click', () => {
 enterDiv.addEventListener('click', () => {
     document.querySelector('.icon-door').style.backgroundImage = "url('./images/door_open.svg')"
     setTimeout(() => {
-        window.location.href = 'about.html'
+        window.location.href = 'home.html'
     }, 1000)
 })
 

@@ -8,7 +8,6 @@
   }
   
   html, body {
-    /* font-size: 62.5%; (62.5/100) * 16px = 10px */
     font-size: clamp(1rem, 2vw + 1rem, 3rem);
     -webkit-text-size-adjust: none; /* for iOS Safari */
     text-size-adjust: none; /* for other mobile browsers */
@@ -22,7 +21,9 @@
   }
   
   p {
-    font-family: 'Times New Roman', Times, serif, 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif, 'Times New Roman', Times, serif; */
+    font-family: "Gill Sans", sans-serif;
+    font-size: 0.35em;
   }
   
   @media (prefers-reduced-motion: no-preference) {
@@ -71,9 +72,7 @@
   
   /* ------ end boilerplate ------- */
 
-  /* ------ begin enter page ------ */
-
-  :root {
+:root {
     --wilpur-orange: #F17500;
     --wilpur-brown: #8B2B00;
     --wilpur-tan: #FFBC46;
@@ -82,6 +81,29 @@
     --scroll-dark: #AD9978;
     --scroll-light: #D5C5A4;
 }
+
+@font-face {
+    font-family: Pixelfy;
+    src: url('./assets/PixelifySans-VariableFont_wght.ttf');
+}
+
+h1, h2, h3 {
+    font-family: Pixelfy;
+}
+
+h1 {
+    font-size: 1.2;
+}
+
+h2 {
+    font-size: .8em;
+}
+
+h3 {
+    font-size: 0.4em;
+}
+
+  /* ------ begin enter page ------ */
   
 .main-intro {
     background-image: url("./images/wilpur1_hs.png");
@@ -137,27 +159,80 @@
 
 /* ------ end enter page ------ */
 
-/* ------ begin about page ------ */
+/* ------ begin home page ------ */
 
-.about-container {
+.main-container {
     background-image: url("./images/clouds_background.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
+}
+
+.main-content-container {
+    margin: 6vh 4vw 6vh 4vw;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: var(--scroll-light);
+    color: var(--wilpur-brown);
     display: flex;
     flex-direction: column;
     overflow: auto;
 }
 
-.main-content {
-    margin: 6vh 4vw 6vh 4vw;
-    padding: 1em;
-    background-color: var(--scroll-light);
-    color: var(--wilpur-brown);
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--scroll-dark);
+    padding-bottom: 0.3rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left h2 {
+    margin-left: .4rem
+}
+
+.header-right {
+    display: flex;
+}
+
+.header-right h3 {
+    border-right: 2px solid var(--scroll-dark);
+    padding-right: .12rem;
+    margin-right: .12rem
+}
+
+.header-right h3:last-child {
+    border-right: none;
+    margin-left: none;
+    margin-right: 0;
 }
 
 
+.header-left img {
+    /* background-image: url("./images/wilpur1_hs.png"); */
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50px;
+}
 
-/* ------ end about page ------ */
+.main-main {
+    margin-top: .24rem;
+}
+
+.main-footer {
+    margin-top: 0.3rem;
+    padding-top: 0.3rem;
+    border-top: 2px solid var(--scroll-dark)
+}
+
+.main-footer p {
+    font-size: .3rem;
+}
+
+/* ------ end home page ------ */
