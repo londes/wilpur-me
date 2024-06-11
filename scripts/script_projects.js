@@ -1,4 +1,5 @@
 let projectDivs = document.querySelectorAll('.topic-top')
+let projectLinks = document.querySelectorAll('.project-header')
 
 projectDivs.forEach(project => {
     project.addEventListener('click', () => {
@@ -11,5 +12,11 @@ projectDivs.forEach(project => {
             topicItems.classList.add('show')
             torch.style.backgroundImage = "url('./images/torch.png')"
         }
+    })
+})
+
+projectLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        window.location = link.children[2].href
     })
 })

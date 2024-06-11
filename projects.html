@@ -20,13 +20,11 @@
                     <div class="header-right">
                         <h3>projects</h3>
                         <h3>about</h3>
-                        <h3>contact</h3>
                     </div>
                 </div>
                 <div class="main-main">
-                    <p>
-                        welcome to my website! check out what I'm working on: 
-                    </p>
+                    <p><span class="italics"><a href="https://quoteinvestigator.com/2019/03/01/abandon/">"An app is never completed, only abandoned."</a></span></p>
+                    <p>Welcome! Please feel free to check out my current projects: </p>
                     <div class="topics">
                         <div class="topic-container">
                             <div class="topic-top" id="crispy">
@@ -37,21 +35,29 @@
                                 <div class="project-info-container">
                                     <div class="project-info-left">
                                         <img src="./images/crispy_todos.png" class="project-image">
-                                        <h3>overengineered todo app</h3>
-                                        <p>after completing my bootcamp I was struggling to keep track of things to work on. tools like Notion and Trello felt like overkill. Then it hit me, why not use my own Todo app, and build my own features and functionality for fun?</p>
-                                        <p>I realized that with some work I could atually use it to keep back of my basic tasks, and what better way to learn more React?</p> 
+                                        <div class="project-header">
+                                            <h3>over-engineered todo app</h3>
+                                            <img class="project-link"src="./images/link.svg"/>
+                                            <a href="https://crispytodo.club"></a>
+                                        </div>
+                                        <p>After completing my bootcamp I struggled to keep track of things to work on and staying organized. Tools like <a href="https://www.notion.so/help/guides/what-is-notion">Notion</a> and <a href="https://trello.com/tour">Trello</a> felt like overkill for my small personal projects.</p>
+                                        <p>Then it hit me, why not take my bare-bones todo app from dev tutorial work and iterate on it? That way I could build my own features and functionality for fun while getting use out of them. I also realized that with some work it could actually be a helpful tool, and a good sandbox to hack on ideas that come to mind and learn more React.</p> 
+                                        <p>Feel free to log in and use it for basic tasks. The fried chicken theme is just based on the fact I used a random name generator for the repo, which was "crispy-octo," so I just ran with the crispy concept.</p>
                                     </div>
                                     <div class="project-info-right">
                                         <ul>
                                             <li><h3>technology</h3></li>
                                             <ul class="list-styled">
-                                                <li><p>some technology I used</p></li>
+                                                <li><p>React, Express, Mongoose, NodeJS</p></li>
+                                                <li><p>User auth implementation (JWT, bcrypt)</p></li>
                                             </ul>
                                             <li><h3>learnings</h3></li>
                                             <ul class="list-styled">
-                                                <li><p>something I learned, super cool</p></li>
-                                                <li><p>something I implemented, super cool</p></li>
-                                                <li><p>something siqqqq, yeah super cool</p></li>
+                                                <li><p>Built the auth system myself because I wanted to learn <a href="https://www.npmjs.com/package/jsonwebtoken">JWT</a> and <a href="https://www.npmjs.com/package/bcrypt">bcrypt</a> instead of using a library</p></li>
+                                                <li><p>Using Schema objects more robustly and handling back-end functionality there instead of in a Controller</p></li>
+                                                <li><p>Implemented my own drag functionality instead of using a library such as <a href="https://www.npmjs.com/package/react-draggable">react-draggable</a></p></li>
+                                                <li><p>First time translating my own design from <a href="https://help.figma.com/hc/en-us/articles/14563969806359-What-is-Figma">Figma</a> into HTML/CSS -- super fun learning experience</p></li>
+                                                <li><p>Working in localStorage and user Controller to manage unauthed/anonymous state versus logged-in state, and correctly handling data during authorization process</p></li>
                                             </ul>
                                         </ul>
                                     </div>
@@ -64,21 +70,79 @@
                                 <div class="topic-selector"></div>
                             </div>
                             <div class="topic-items">
-                                <p>Some stuff about this topic 2 yayayaya</p>
+                                <div class="project-info-container">
+                                    <div class="project-info-left">
+                                        <img src="./images/wgnext.png" class="project-image">
+                                        <div class="project-header">
+                                            <h3>b-ball community and court-locator</h3>
+                                            <img class="project-link"src="./images/link.svg"/>
+                                            <a href="https://we-got-next.onrender.com"></a>
+                                        </div>
+                                        <p>My friend Gio, who is an avid basketball player and content creator, approached me with the idea of We Got Next and the ideas started flowing.</p>
+                                        <p>What if there was an easy way to find a basketball court where people are playing? What if someone could check out information on local courts and connect with players in their area?</p>
+                                        <p>All we had was a giant spreadsheet of information about basketball courts. This is the project that inspired me to get stronger at coding and build my friend's dream into a reality. I've had a lot of fun getting this far and I'm excited for the possibilities of what's to come.</p> 
+                                        <p>Ask me about the mobile app -- the desktop app shares all of the same functionality, but we feel this one will eventually be mobile-first.</p> 
+                                    </div>
+                                    <div class="project-info-right">
+                                        <ul>
+                                            <li><h3>technology</h3></li>
+                                            <ul class="list-styled">
+                                                <li><p>React, React Native (mobile app), Express, Mongoose, NodeJS</p></li>
+                                                <li><p>User auth implementation (JWT, jose)</p></li>
+                                                <li><p>Google Maps API</p></li>
+                                            </ul>
+                                            <li><h3>learnings</h3></li>
+                                            <ul class="list-styled">
+                                                <li><p>Implementing the <a href="https://www.npmjs.com/package/@react-google-maps/api">Google Maps API</a> and its appropriate Marker functionality along with building an interactive map</p></li>
+                                                <li><p>React Native, and translating the web app to mobile. Too much to cover here but a lot to do with React Native components, app structure, React Native CSS, and so-on</p></li>
+                                                <li><p>This was my first implementation of Mongoose/Express/NodeJS and the <a href="https://developer.mozilla.org/en-US/docs/Glossary/MVC">MVC model</a> more generally</p></li>
+                                                <li><p>I tripped over, and redesigned, the Courts data Schema so many times that I ended up spending a fair amount of time in the <a href="https://www.mongodb.com/docs/mongodb-shell/">Mongo Shell</a></p></li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="topic-container">
-                        <div class="topic-top" id="docs">
-                            <h2>Wilpur Docs</h2>
-                            <div class="topic-selector"></div>
-                        </div>
-                        <div class="topic-items">
-                            <p>work in progress, just have this in here for testing purposes for this portfolio site</p>
+                            <div class="topic-top" id="opd">
+                                <h2>Organized Piles</h2>
+                                <div class="topic-selector"></div>
+                            </div>
+                            <div class="topic-items">
+                                <div class="project-info-container">
+                                    <div class="project-info-left">
+                                        <img src="./images/organizedpiles.png" class="project-image">
+                                        <div class="project-header">
+                                            <h3>interactive visual designs</h3>
+                                            <img class="project-link"src="./images/link.svg"/>
+                                            <a href="https://organizedpiles.space"></a>
+                                        </div>
+                                        <p>One of my favorite things is messing around with interactive visuals that run in the web browser. I'm consistently inspired by visual artists such as <a href="https://www.newrafael.com/">Rafael Rozendaal</a>.</p>
+                                        <p>So far I've only really delved into some basics involving HTML Canvas alongside vanilla JavaScript, and implementing some math. In the future I'd like to get involved with some <a href="https://threejs.org/">Three JS</a> which is inspiring technology, and other comparable visual libraries.</p>
+                                    </div>
+                                    <div class="project-info-right">
+                                        <ul>
+                                            <li><h3>technology</h3></li>
+                                            <ul class="list-styled">
+                                                <li><p>JavaScript, HTML Canvas</p></li>
+                                                <li><p>Math</p></li>
+                                            </ul>
+                                            <li><h3>learnings</h3></li>
+                                            <ul class="list-styled">
+                                                <li><p><a href="https://www.w3schools.com/html/html5_canvas.asp">HTML Canvas</a> is actually pretty darn powerful</p></li>
+                                                <li><p>I now realize how much math goes into designing anything animated or interactive in the browser</p></li>
+                                                <li><p>There are a lot of ways to crash the browser by overwhelming it with information from mouse listeners, and those listeners interacting with surrounding objects</p></li>
+                                                <li><p>Using <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">Github Pages</a> to host, which then turned into a crash-course in DNS and how the internet works</p></li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="main-footer">
-                    <p>copyright william purcell, 2024. this site is made from scratch with vanilla JavaScript, HTML, and CSS</p>
+                    <p>copyright william purcell, 2024. this site is home-made with vanilla JavaScript, HTML, and CSS</p>
                 </div>
             </div>
         </div>
