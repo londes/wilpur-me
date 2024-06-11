@@ -8,7 +8,7 @@
   }
   
   html, body {
-    font-size: clamp(1rem, 2vw + 1rem, 3rem);
+    font-size: clamp(1rem, 2vw + 1rem, 2.7rem);
     -webkit-text-size-adjust: none; /* for iOS Safari */
     text-size-adjust: none; /* for other mobile browsers */
     margin: 0;
@@ -41,16 +41,12 @@
     text-decoration: none;
   }
   
-  menu:not(article menu),
-  ol:not(article ol),
-  ul:not(article ul) {
-    list-style: none;
-  }
-  
   menu,
   ol,
   ul {
-    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
   
   article ol,
@@ -226,10 +222,16 @@ h3 {
     margin-top: .24rem;
 }
 
-.main-footer {
-    margin-top: 0.3rem;
-    padding-top: 0.3rem;
-    border-top: 2px solid var(--scroll-dark)
+.topic-container {
+    margin-top: .22rem;
+    margin-bottom: .22rem;
+    padding-bottom: .22rem;
+    border-bottom: 2px solid var(--scroll-dark);
+    width: fit-content;
+}
+
+.topics .topic-container:last-child {
+    border-bottom: none
 }
 
 .topic-top {
@@ -254,18 +256,72 @@ h3 {
 
 .topic-items {
     overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-out;
+    max-height: 0px;
+    max-width: 30vw;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, max-width 0.5s ease-out;
 }
 
 .topic-items.show {
     max-height: 100vh;
-    transition: max-height 0.5s ease-in;
+    max-width: 100%;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.project-info-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: .22rem;
+}
+
+.project-info-container > * {
+    margin-top: .22rem;
+    margin-bottom: .22rem;
+}
+
+.project-info-left {
+    flex: 6;
+    padding-right: .22rem;
+    border-right: 2px solid var(--scroll-dark)
+}
+
+.project-info-left p {
+    font-size: 0.27em;
+}
+
+.project-info-left > * {
+    margin-top: .17rem;
 }
 
 .project-image {
     width: 7rem;
-    height: 5rem;
+}
+
+.project-info-right {
+    flex: 4;
+    margin-left: .27rem;
+    padding-left: .22rem;
+}
+
+.project-info-right p {
+    font-size: 0.32em;
+}
+
+.list-styled {
+    padding-left: .22rem;
+}
+
+.list-styled li {
+    margin-top: .07rem;
+    margin-bottom: .07rem
+}
+
+
+.main-footer {
+    margin-top: 0.1rem;
+    padding-top: 0.1rem;
+    border-top: 2px solid var(--scroll-dark)
 }
 
 .main-footer p {
