@@ -8,7 +8,7 @@
   }
   
   html, body {
-    font-size: clamp(1rem, 2vw + 1rem, 2.7rem);
+    font-size: clamp(1rem, 2.2vw + 1rem, 2.7rem);
     -webkit-text-size-adjust: none; /* for iOS Safari */
     text-size-adjust: none; /* for other mobile browsers */
     margin: 0;
@@ -104,7 +104,6 @@ h3 {
 a {
     text-decoration: none;
     font-weight: bold;
-    font-size: .9em;
     color: var(--wilpur-brown);
     position: relative;
     display: inline-block;
@@ -120,8 +119,12 @@ a::after {
     left: 0;
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform 0.12s ease-out;
+    transition: transform 0.1s ease-out;
     z-index: -1;
+}
+
+a:active {
+    color: var(--wilpur-green)
 }
 
 a:hover::after {
@@ -207,7 +210,7 @@ a:hover::after {
 }
 
 .main-content-container {
-    margin: 6vh 4vw;
+    margin: 4vh 4vw;
     padding: 0.5rem 1rem;
     background-color: var(--scroll-light);
     color: var(--wilpur-brown);
@@ -241,6 +244,10 @@ a:hover::after {
     display: flex;
 }
 
+.nav-link.active {
+    color: var(--wilpur-green)
+}
+
 .header-right h3 {
     border-right: 2px solid var(--scroll-dark);
     padding-right: .22rem;
@@ -262,6 +269,10 @@ a:hover::after {
 
 .main-main {
     margin-top: .24rem;
+}
+
+.main-main a {
+    font-size: .87em;
 }
 
 .topic-container {
@@ -396,3 +407,65 @@ a:hover::after {
 }
 
 /* ------ end home page ------ */
+
+/* ----- begin about page ----- */
+
+/* stole this from our projects page */
+.about-topic {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-topic h2 {
+    font-size: .55em;
+    margin-right: .4rem;
+}
+
+.about-topic > p {
+    margin-bottom: .32rem
+}
+
+.about-contact {
+    display: flex;
+    align-items: center;
+}
+
+.about-contact > * {
+    margin-right: .3em;
+    margin-bottom: .32rem;
+}
+
+.contact-link {
+    width: 2rem;
+    cursor: pointer;
+    filter: invert(12%) sepia(85%) saturate(4633%) hue-rotate(35deg) brightness(100%) contrast(102%);
+}
+
+.contact-link:hover {
+    filter: invert(70%) sepia(62%) saturate(6985%) hue-rotate(8deg) brightness(102%) contrast(101%);
+}
+
+.email-container {
+    position: relative;
+}
+
+.email-popup {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.email-popup.show {
+    opacity: 1;
+}
+
+.email-popup.hidden {
+    display: hidden;
+}
