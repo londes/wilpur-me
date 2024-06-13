@@ -8,7 +8,7 @@
   }
   
   html, body {
-    font-size: clamp(1rem, 2.2vw + 1rem, 2.7rem);
+    font-size: clamp(1rem, 2.5vw + 1rem, 3rem);
     -webkit-text-size-adjust: none; /* for iOS Safari */
     text-size-adjust: none; /* for other mobile browsers */
     margin: 0;
@@ -210,13 +210,15 @@ a:hover::after {
 }
 
 .main-content-container {
-    margin: 4vh 4vw;
+    margin: 1rem 1rem 1rem .83rem;
     padding: 0.5rem 1rem;
     background-color: var(--scroll-light);
     color: var(--wilpur-brown);
     overflow: auto;
     display: flex;
     flex-direction: column;
+    box-shadow: .17rem .2rem var(--scroll-dark);
+    border: 2px solid var(--scroll-dark)
 }
 
 .main-main > p {
@@ -425,12 +427,17 @@ a:hover::after {
     margin-bottom: .32rem
 }
 
+.about-topic h2 {
+    margin-bottom: .16rem
+}
+
 .about-contact {
     display: flex;
     align-items: center;
 }
 
 .about-contact > * {
+    position: relative;
     margin-right: .3em;
     margin-bottom: .32rem;
 }
@@ -451,11 +458,11 @@ a:hover::after {
 
 .email-popup {
     position: absolute;
-    top: 10%;
+    top: -150%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
+    background-color: var(--scroll-dark);
+    color: var(--wilpur-brown);
     padding: 10px 20px;
     border-radius: 20px;
     opacity: 0;
