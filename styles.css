@@ -238,6 +238,12 @@ a:hover::after {
     align-items: center;
 }
 
+.header-left img {
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50px;
+}
+
 .header-left h2 {
     margin-left: .4rem
 }
@@ -261,7 +267,7 @@ a:hover::after {
     .header-left h2 {
         font-size: 0.67em
     }
-    /* kinda hacky but the only place we're using h3 is in the right header and we need to fix that for mobile */
+
     h3 {
         font-size: 0.37em;
     }
@@ -274,13 +280,6 @@ a:hover::after {
     border-right: none;
     margin-left: none;
     margin-right: 0;
-}
-
-
-.header-left img {
-    height: 1.7rem;
-    width: 1.7rem;
-    border-radius: 50px;
 }
 
 .main-main {
@@ -388,10 +387,15 @@ a:hover::after {
     filter: invert(70%) sepia(62%) saturate(6985%) hue-rotate(8deg) brightness(102%) contrast(101%);
 }
 
+.project-header h3{
+    flex: 7;
+}
+
 .project-link {
     margin-left: .07em;
     width: .4rem;
     filter: invert(12%) sepia(85%) saturate(4633%) hue-rotate(35deg) brightness(100%) contrast(102%);
+    flex: 3;
 }
 
 .project-info-right {
