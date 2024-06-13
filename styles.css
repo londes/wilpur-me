@@ -256,6 +256,17 @@ a:hover::after {
     margin-right: .22rem
 }
 
+/* the only mobile adjustments we seem to need to make is to the header */
+@media only screen and (max-width: 768px) {
+    .header-left h2 {
+        font-size: 0.72em
+    }
+    /* kinda hacky but the only place we're using h3 is in the right header and we need to fix that for mobile */
+    .h3{
+        font-size: 0.37em;
+    }
+}
+
 .header-right h3:last-child {
     border-right: none;
     margin-left: none;
