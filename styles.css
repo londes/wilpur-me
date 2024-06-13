@@ -265,6 +265,9 @@ a:hover::after {
     h3 {
         font-size: 0.37em;
     }
+    .main-content-container {
+        padding: 0.4rem .6rem;
+    }
 }
 
 .header-right h3:last-child {
